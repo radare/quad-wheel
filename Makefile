@@ -11,13 +11,13 @@ TARGET	= quadwheel
 .PHONY: all clean cleanall
 
 all: $(OBJS)
-	gcc $(CFLAGS) $(OBJS) -o $(TARGET) -lm
+	$(CC) $(CFLAGS) $(OBJS) -o $(TARGET) -lm
 
 debug: $(OBJS)
-	gcc -g -Wall -DDONT_USE_POOL $(DEFIN) $(CFILES) -o $(TARGET) -lm
+	$(CC) -g -Wall -DDONT_USE_POOL $(DEFIN) $(CFILES) -o $(TARGET) -lm
 
 stepdebug: $(OBJS)
-	gcc -g -Wall -DDEBUG $(DEFIN) $(CFILES) -o $(TARGET) -lm
+	$(CC) -g -Wall -DDEBUG $(DEFIN) $(CFILES) -o $(TARGET) -lm
 
 parser.c: parser.y
 	$(YACC) -oparser.c -d parser.y
