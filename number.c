@@ -15,8 +15,8 @@ static const long long *INF = &_numinf;
 	static const unsigned char _numnan[] = { 0x7F, 0xF8, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 };
 	static const unsigned char _numinf[] = { 0x7F, 0xF0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 };
 	#endif
-	static const char *NAN = _numnan;
-	static const char *INF = _numinf;
+	static const unsigned char *NAN = _numnan;
+	static const unsigned char *INF = _numinf;
 #endif
 
 double ieee_makeinf(int i)
